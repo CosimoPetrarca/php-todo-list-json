@@ -10,7 +10,7 @@ createApp({
         }
     },
     mounted() {
-        axios.get('todo.json')
+        axios.get('server.php')
             .then(response => {
                 this.todos = response.data;
             });
