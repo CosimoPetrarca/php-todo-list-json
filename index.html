@@ -20,8 +20,13 @@
                 <span>{{ todo.text }}</span>
             </li>
         </ul>
+
+        <form id="addTodoForm" @submit.prevent="addTodo">
+            <input type="text" v-model="newTodo" placeholder="Aggiungi una nuova todo">
+            <button type="submit">Aggiungi</button>
+        </form>
     </div>
-    
+
     <!-- java script-->
     <script src="main.js"></script>
 </body>

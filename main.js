@@ -5,7 +5,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            todos: []
+            todos: [],
+            newTodo: ''
         }
     },
     mounted() {
@@ -13,7 +14,17 @@ createApp({
             .then(response => {
                 this.todos = response.data;
             });
+    },
+    methods: {
+        addTodo() {
+            if (this.newTodo.trim() !== '') {
+                this.todos.push({
+                    text: this.newTodo,
+                    done: false
+                });
+                this.newTodo = '';
+            }
+        }
     }
-
 
 }).mount('#app');
