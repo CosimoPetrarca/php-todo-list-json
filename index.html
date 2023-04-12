@@ -6,15 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Todo list</title>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- vuejs -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
-    <div id="app"></div>
-
-
-
-    <!-- vuejs -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <div id="app">
+        <h1>Todo List</h1>
+        <ul>
+            <li v-for="todo in todos">
+                <span>{{ todo.text }}</span>
+            </li>
+        </ul>
+    </div>
+    
     <!-- java script-->
     <script src="main.js"></script>
 </body>
